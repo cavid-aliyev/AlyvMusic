@@ -1,13 +1,16 @@
-import { Button } from "@material-ui/core";
 import React from "react";
+import Navbar from "../components/NavBar";
+import MainLayout from "../layouts/MainLayout";
 
 const Index: React.FC = () => {
   return (
     <>
-      <div className="center">
-        <h1>Welcome!</h1>
-        <h3>All best hits here now!</h3>
-      </div>
+      <MainLayout>
+        <div className="center">
+          <h1>Welcome!</h1>
+          <h3>All best hits here now!</h3>
+        </div>
+      </MainLayout>
 
       <style jsx>
         {`
