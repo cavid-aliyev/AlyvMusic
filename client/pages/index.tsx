@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../components/NavBar";
 import MainLayout from "../layouts/MainLayout";
 
 const Index: React.FC = () => {
