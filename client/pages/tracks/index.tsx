@@ -5,8 +5,6 @@ import { TrackList } from "../../components";
 import MainLayout from "../../layouts/MainLayout";
 import { ITrack } from "../../types/track";
 
-
-
 const Index: React.FC = () => {
   const router = useRouter();
   const tracks: ITrack[] = [
@@ -17,7 +15,7 @@ const Index: React.FC = () => {
       text: "Some texts",
       listens: 5,
       audio: "smth",
-      picture: 'sdsds',
+      picture: "sdsds",
       comments: [],
     },
     {
