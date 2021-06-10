@@ -1,10 +1,12 @@
 import React from "react";
 import MainLayout from "../../layouts/MainLayout";
-import { StepForm, StepWrapper } from "../../components";
+import { FileUpload, StepForm, StepWrapper } from "../../components";
 import { Button, Grid } from "@material-ui/core";
 
 const Create: React.FC = () => {
   const [activeStep, setActiveStep] = React.useState(0);
+  const [picture, setPicture] = React.useState(null);
+  const [audio, setAudio] = React.useState(null);
 
   const next = () => {
     if (activeStep !== 2) {
@@ -19,8 +21,16 @@ const Create: React.FC = () => {
     <MainLayout>
       <StepWrapper activeStep={activeStep}>
         {activeStep === 0 && <StepForm />}
-        {activeStep === 1 && <h1>Step 1</h1>}
-        {activeStep === 2 && <h1>Step 2</h1>}
+        {activeStep === 1 && (
+          <FileUpload setFile={setPicture} accept="image/*">
+            <Button>Download Image</Button>
+          </FileUpload>
+        )}
+        {activeStep === 2 && (
+          <FileUpload setFile={setAudio} accept="audio/*">
+            <Button>Download Audio</Button>
+          </FileUpload>
+        )}
       </StepWrapper>
       <Grid container justifyContent="space-between">
         <Button disabled={activeStep === 0} onClick={back}>
