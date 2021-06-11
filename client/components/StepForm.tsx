@@ -4,8 +4,8 @@ import React from "react";
 const StepForm: React.FC = () => {
   return (
     <Grid container direction={"column"} style={{padding: 20}}>
-      <TextField style={{ marginTop: 10 }} label={"Track Name"} />
-      <TextField style={{ marginTop: 10 }} label={"Artist name"} />
+      <TextField style={{ marginTop: 10 }} label="Track Name" />
+      <TextField style={{ marginTop: 10 }} label="Artist name" />
       <TextField
         style={{ marginTop: 10 }}
         label={"Track words"}

@@ -2,6 +2,7 @@ import { Box, Button, Card, Grid } from "@material-ui/core";
 import { useRouter } from "next/router";
 import React from "react";
 import { TrackList } from "../../components";
+import { useTypedSelector } from "../../hooks/useTypedSelector";
 import MainLayout from "../../layouts/MainLayout";
 import { ITrack } from "../../types/track";
 
