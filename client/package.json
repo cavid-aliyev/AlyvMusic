@@ -13,6 +13,7 @@
     "@material-ui/core": "^5.0.0-alpha.35",
     "@material-ui/icons": "^4.11.2",
     "@types/react-redux": "^7.1.16",
+    "axios": "^0.21.1",
     "next": "10.2.3",
     "next-redux-wrapper": "^7.0.0",
     "react": "17.0.2",
