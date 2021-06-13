@@ -1,22 +1,14 @@
 import { Button, Grid, TextField } from "@material-ui/core";
+import axios from "axios";
+import { GetServerSideProps } from "next";
 import { useRouter } from "next/router";
 import React from "react";
 import MainLayout from "../../layouts/MainLayout";
 import { ITrack } from "../../types/track";
 
-const TrackPage = () => {
+const TrackPage = ({ serverTrack }) => {
   const router = useRouter();
-
-  const track: ITrack = {
-    _id: "1",
-    name: "Track1",
-    artist: "Morgen",
-    text: "Some texts",
-    listens: 5,
-    audio: "smth",
-    picture: "sdsds",
-    comments: [],
-  };
+  const [track, setTrack] = React.useState<ITrack>(serverTrack);
 
   return (
     <MainLayout>
@@ -28,7 +20,7 @@ const TrackPage = () => {
         go back list
       </Button>
       <Grid container style={{ margin: "20px 0" }}>
-        <img src={track.picture} width={200} height={200} alt="Track Info" />
+        <img src={"http://localhost:5000/" + track.picture} width={200} height={200} alt="Track Info" />
         <div style={{ marginLeft: "30px" }}>
           <h1>Track name - {track.name}</h1>
           <h1>Track artist - {track.artist}</h1>
@@ -56,3 +48,12 @@ const TrackPage = () => {
 };
 
 export default TrackPage;
+
+export const getServerSideProps: GetServerSideProps = async ({ params }) => {
+  const response = await axios.get("http://localhost:5000/tracks/" + params.id);
+  return {
+    props: {
+      serverTrack: response.data,
+    },
+  };
+};

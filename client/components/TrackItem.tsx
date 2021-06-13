@@ -30,7 +30,7 @@ const TrackItem: React.FC<TrackItemProps> = ({ track, active = false }) => {
       <IconButton onClick={(e) => e.stopPropagation()}>
         {active ? <Pause /> : <PlayArrow />}
       </IconButton>
-      <img width={70} height={70} src={track.picture} />
+      <img width={70} height={70} src={'http://localhost:5000/' + track.picture} />
       <Grid
         container
         direction="column"
