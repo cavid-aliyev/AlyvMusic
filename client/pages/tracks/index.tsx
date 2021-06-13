@@ -21,7 +21,7 @@ const Index: React.FC = () => {
   }
 
   return (
-    <MainLayout>
+    <MainLayout title="Tracks list">
       <Grid container justifyContent="center">
         <Card style={{ width: 900 }}>
           <Box p={3}>
