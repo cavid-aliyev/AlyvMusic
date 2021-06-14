@@ -27,10 +27,14 @@ const TrackItem: React.FC<TrackItemProps> = ({ track, active = false }) => {
       className={styles.track}
       onClick={() => router.push("/tracks/" + track._id)}
     >
-      <IconButton onClick={(e) => e.stopPropagation()}>
+      <IconButton onClick={play}>
         {active ? <Pause /> : <PlayArrow />}
       </IconButton>
-      <img width={70} height={70} src={'http://localhost:5000/' + track.picture} />
+      <img
+        width={70}
+        height={70}
+        src={"http://localhost:5000/" + track.picture}
+      />
       <Grid
         container
         direction="column"

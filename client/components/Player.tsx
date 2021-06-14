@@ -10,17 +10,6 @@ import { useActions } from "../hooks/useActions";
 let audio;
 
 const Player = () => {
-  const track: ITrack = {
-    _id: "1",
-    name: "Track1",
-    artist: "Morgen",
-    text: "Some texts",
-    listens: 5,
-    audio: "smth",
-    picture: "sdsds",
-    comments: [],
-  };
-
   const { active, pause, volume, duration, currentTime } = useTypedSelector(
     (state) => state.playerReducer
   );

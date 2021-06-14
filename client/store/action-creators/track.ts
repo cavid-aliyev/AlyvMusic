@@ -10,7 +10,7 @@ export const fetchTracks = () => {
     } catch (e) {
       dispatch({
         type: TrackActionTypes.FETCH_TRACKS_ERROR,
-        payload: "SOmething went wrong",
+        payload: "Something went wrong",
       });
     }
   };
@@ -25,7 +25,7 @@ export const searchTracks = (query: string) => {
     } catch (e) {
       dispatch({
         type: TrackActionTypes.FETCH_TRACKS_ERROR,
-        payload: "SOmething went wrong",
+        payload: "Something went wrong",
       });
     }
   };

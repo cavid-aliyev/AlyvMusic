@@ -8,7 +8,7 @@ interface StepFormProps {
   text: any;
 }
 
-const StepForm: React.FC<StepFormProps> = ({name, artist, text}) => {
+const StepForm: React.FC<StepFormProps> = ({ name, artist, text }) => {
   return (
     <Grid container direction={"column"} style={{ padding: 20 }}>
       <TextField {...name} style={{ marginTop: 10 }} label="Track Name" />
